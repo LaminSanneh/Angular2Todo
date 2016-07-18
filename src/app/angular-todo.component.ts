@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import {TodosComponent} from "./todos";
 
 @Component({
   moduleId: module.id,
   selector: 'angular-todo-app',
   templateUrl: 'angular-todo.component.html',
-  styleUrls: ['angular-todo.component.css']
+  outputs: ['deleteTodo'],
+  styleUrls: ['angular-todo.component.css'],
+  directives: [TodosComponent]
 })
 export class AngularTodoAppComponent {
   title = 'angular-todo works!';
